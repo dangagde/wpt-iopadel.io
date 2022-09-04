@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+
+
+    
+}
+
+.global-header{
+    background-color: #22356d;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(136, 233, 250);
+   
+}
+
+.block-player{
+    display: block;
+    margin: 0;
+}
+
+.player-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding:15px;
+
+}
+
+.player-card{
+    font-weight: 720;
+    color: #22356d;
+    align-items: center;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.player-header{
+    display: flex;
+    align-items: center;
+}
+
+.player-ranking{
+    font-size: xxx-large;
+    
+}
+
+.player-name{
+    font-size: x-large;
+}
+
+.player-photo img{
+    margin-left: 10px;
+    border-radius: 50%;
+    border-color:rgb(136, 233, 250);
+    border-style: solid;
+
+}
+
+.player-footer{
+    margin-top: 5px;
+    margin-left: 0;
+    background-color:rgb(136, 233, 250) ;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-country img{
+    border-radius: 20%;
+}
+.player-score{
+
+    margin-right: 2.5px;
+}
