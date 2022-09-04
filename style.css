@@ -44,8 +44,9 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    padding:25px;
     margin-top: 0;
+    padding: 5px;
+
 
 
 }
