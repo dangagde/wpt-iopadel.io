@@ -46,9 +46,23 @@ body{
     list-style: none;
     margin-top: 0;
     padding: 5px;
+}
 
+.player-list-reserva{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 0;
+    padding: 5px;
 
+}
 
+.player-list-reserva li{
+    background-color: rgba(255, 0, 0, 0.227);
+    box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
+box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
 }
 
 .player-card{
@@ -68,7 +82,7 @@ box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
     align-items: center;
     padding: 5px;
     margin-top: 15px;
-    background-color: rgba(255, 0, 0, 0.301);
+    background-color: rgba(255, 0, 0, 0.227);
     box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
 -moz-box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
 box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
@@ -85,7 +99,7 @@ box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
 }
 
 .player-name{
-    font-size: x-large;
+    font-size: smaller;
 }
 
 .player-photo img{
