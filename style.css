@@ -19,15 +19,34 @@ body{
 
 .block-player{
     display: block;
-    margin: 0;
+    
 }
+
+.block-title{
+    display: flex;
+    background-color: darkgray ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block-title-left{
+    display: flex;
+    padding-left: 15px;
+}
+
+.block-title-right{
+    padding-right: 15px;
+}
+
 
 .player-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    padding:15px;
+    padding:25px;
+    margin-top: 0;
+
 
 }
 
@@ -37,6 +56,9 @@ body{
     align-items: center;
     padding: 5px;
     margin-top: 15px;
+    box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
+box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
 }
 
 .player-header{
@@ -58,6 +80,7 @@ body{
     border-radius: 50%;
     border-color:rgb(136, 233, 250);
     border-style: solid;
+    border-width: 5px;
 
 }
 
@@ -79,4 +102,8 @@ body{
 .player-score{
 
     margin-right: 2.5px;
+}
+
+.trophie{
+    align-items: center;
 }
