@@ -98,7 +98,7 @@ function fotosTemplate(jugador){
     <a class="link-bio">
         <div class="player-header">
             <div class="player-details">
-                <div class="player-ranking">${players.findIndex(x => x.name == jugador.name)+1}</div>
+                <div class="player-ranking"></div>
                 <div class="player-name">${jugador.name}</div>
             </div>
             <div class="player-photo">
