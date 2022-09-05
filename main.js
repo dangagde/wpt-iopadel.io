@@ -92,15 +92,15 @@ const suplentes = [
 /* PLAYERS */
 
 
-/*players.findIndex(x => x.name == jugador.name)+1
-let players = jugadores.sort((a,b) => {return b.points - a.points;});*/
+
+let players = jugadores.sort((a,b) => {return b.points - a.points;});
 function fotosTemplate(jugador){
     return `
     <li class="player-card">
     <a class="link-bio">
         <div class="player-header">
             <div class="player-details">
-                <div class="player-ranking">${jugador.ranking}</div>
+                <div class="player-ranking">${players.findIndex(x => x.name == jugador.name)+1}</div>
                 <div class="player-name">${jugador.name}</div>
             </div>
             <div class="player-photo">
@@ -120,5 +120,5 @@ function fotosTemplate(jugador){
 }
 
 document.getElementById("auto-card").innerHTML=`
-${jugadores.map(fotosTemplate).join('')}`
+${players.map(fotosTemplate).join('')}`
 
