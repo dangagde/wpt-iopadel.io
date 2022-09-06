@@ -157,7 +157,8 @@ box-shadow: 3px -2px 20px -10px rgba(0,0,0,0.75);
 
 .block-profile-up{
     background-color: white;
-    width: 280px;
+    margin: 5px;
+    width: 270px;
     height: 110px;
     border-top-right-radius: 5%;
     border-top-left-radius: 5%;
@@ -188,6 +189,8 @@ box-shadow: 3px -2px 20px -10px rgba(0,0,0,0.75);
     text-align: center;
     color: #22356d;
     width: 50px;
+
+    
 }
 
 .name-ranking-profile h5{
@@ -233,7 +236,7 @@ box-shadow: 3px -2px 20px -10px rgba(0,0,0,0.75);
 .player-stats li{
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
