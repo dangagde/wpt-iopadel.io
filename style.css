@@ -207,9 +207,10 @@ box-shadow: 3px -2px 20px -10px rgba(0,0,0,0.75);
 }
 
 .block-profile-down{
-    width: auto;
-    height:max-content;
-    background-color:  rgb(227, 224, 224);
+    width: 270px;
+    margin-left: 5px;
+    height:auto;
+    background-color:  rgb(240, 240, 240);
     margin-top: 5px;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
@@ -218,6 +219,7 @@ box-shadow: 3px -2px 20px -10px rgba(0,0,0,0.75);
 .block-player-stats{
     padding-top: 50px;
     padding-bottom: 20px;
+    
 }
 
 .player-stats{
