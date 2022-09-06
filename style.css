@@ -45,6 +45,9 @@ body{
     margin-top: 40px;
 }
 
+#week-countdown{
+    text-transform: none;
+}
 
 .player-list{
     display: flex;

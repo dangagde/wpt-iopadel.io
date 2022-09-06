@@ -123,3 +123,18 @@ document.getElementById("auto-card").innerHTML=`
 ${players.map(fotosTemplate).join('')}`
 
 console.log('hola')
+
+setInterval(function time(){
+  var d = new Date();
+  var days = 7 - d.getDay();
+  var hours = 24 - d.getHours();
+  var min = 60 - d.getMinutes();
+  if((min + '').length == 1){
+    min = '0' + min;
+  }
+  var sec = 60 - d.getSeconds();
+  if((sec + '').length == 1){
+        sec = '0' + sec;
+  }
+  jQuery('#week-countdown h3').html(days+'D : '+hours+'h : '+min+'m : '+sec+'s ')
+}, 1000);
