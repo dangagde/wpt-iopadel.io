@@ -124,8 +124,21 @@ ${players.map(fotosTemplate).join('')}`
 
 console.log('hola')
 
-setInterval(function time(){
-  var d = new Date();
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*setInterval(function time(){
+  var d = new Date('September 8, 2022 19:00:00');
   var days = 7 - d.getDay();
   var hours = 24 - d.getHours();
   var min = 60 - d.getMinutes();
@@ -136,5 +149,6 @@ setInterval(function time(){
   if((sec + '').length == 1){
         sec = '0' + sec;
   }
+  console.log(d)
   jQuery('#week-countdown h3').html(days+'D : '+hours+'h : '+min+'m : '+sec+'s ')
-}, 1000);
+}, 1000);*/
