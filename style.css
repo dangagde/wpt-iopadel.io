@@ -45,8 +45,12 @@ body{
     margin-top: 40px;
 }
 
-#week-countdown{
+#date{
     text-transform: none;
+    color: #22356d;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .player-list{

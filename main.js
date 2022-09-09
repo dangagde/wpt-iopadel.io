@@ -122,11 +122,38 @@ function fotosTemplate(jugador){
 document.getElementById("auto-card").innerHTML=`
 ${players.map(fotosTemplate).join('')}`
 
-console.log('hola')
 
+setInterval(() => {
+    var a = new Date('9, 12, 2022 20:30:00');
+    var b = new Date();
 
+    var days = a.getDate() - b.getDate();
+    var hours = a.getHours()-b.getHours();
+    var minutes = a.getMinutes()-b.getMinutes();
+    var seconds = a.getSeconds()-b.getSeconds();
+    if(minutes<0){
+        minutes = minutes + 60;
+        hours = hours - 1;
+    }
+    if(seconds<0){
+        minutes = minutes -1;
+        seconds = seconds+60;
+    }
+    if(b<a){
+        m= days+'D : '+hours+'h : '+minutes+'min : '+seconds+'s';
 
+        
+    }else{
+        m= 'La jornada actual finalizará en: '+'';
+        
+        console.log('cambio')
+    }
+    console.log(a.getDay())
+    document.querySelector("#date").innerHTML= m
 
+    
+    
+}, 1000);
 
 
 

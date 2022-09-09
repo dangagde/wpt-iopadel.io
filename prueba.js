@@ -1,48 +1,42 @@
 
+setInterval(() => {
 
-console.log('hola')
+    const a = new Date('9 9, 2022 03:09:00');
+    var b = new Date();
 
+    var days = a.getDate() - b.getDate();
+    var hours = a.getHours()-b.getHours();
+    var minutes = a.getMinutes()-b.getMinutes();
+    var seconds = a.getSeconds()-b.getSeconds();
+    if(minutes<0){
+        minutes = minutes + 60;
+        hours = hours - 1;
+    }
+    if(seconds<0){
+        minutes = minutes -1;
+        seconds = seconds+60;
+    }
+    if(b<a){
+        m= days+'D : '+hours+'h : '+minutes+'min : '+seconds+'s'; 
+    }else{
+        a.setDate(a.getDate()+7)
+        console.log(a)
+        m= days+'D : '+hours+'h : '+minutes+'min : '+seconds+'s'; 
+    }
+    document.querySelector("#date").innerHTML= m
+    
 
-var aa = new Date(2022,9,9).getTime();
-var a = 604800000000000;
-var b = new Date().getTime();
-var c = a-b;
-console.log(a)
-console.log(b)
-console.log(c)
-
-var days = Math.floor(c / (1000 * 60 * 60 * 24));
-var hours = Math.floor((c % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((c % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((c % (1000 * 60)) / 1000);
-console.log(days)
-console.log(hours)
-console.log(minutes)
-console.log(seconds)
+}, 1000);
 
 
 /*
-    document.getElementById("demo").innerHTML = "EXPIRED";
+m= 'La jornada actual finalizará en: '+'';
 
 setInterval(() => {
-
-    var f = c --;
-    console.log(f)
-
-    document.querySelector("#date").innerHTML= c
-}, 1000);
-
-setInterval(() => {
-
-    let b = time.getDay(d)
-    console.log(b)
-    document.querySelector("#date").innerHTML= b
-}, 1000);
-
-setInterval(() => {
-    counter--;
-    console.log(counter)
-    document.querySelector("#timer").innerHTML= counter
+    var t=time++;
+    var h = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var m = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var s = Math.floor((t % (1000 * 60)) / 1000);
+    console.log(h+'; '+m+': '+s)
+    
 }, 1000);*/
-
-
