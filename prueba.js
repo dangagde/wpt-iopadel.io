@@ -1,10 +1,25 @@
 
+const a = new Date('9 12, 2022 20:30:00');
+const b = new Date();
+const startTiming = ((a-b)*(10** -3))
+let time = startTiming
+console.log(time)
+setInterval(UpdateTimer,1000)
+function UpdateTimer(){
+    let days = Math.floor(time/60/60/24)
+    let hours = Math.floor(((time/60/60)%24))
+    const minutes = Math.floor((time/60)%60)
+    let seconds = Math.floor(time%60)
+
+    document.querySelector("#date").innerHTML= `${days} : ${hours} : ${minutes} : ${seconds}` 
+    time--
+}
 /*
 const startTiming = 90
 let time = startTiming*60
 
 setInterval(UpdateTimer,1000)
-function UpdateTimer(){
+function UpdateTimer()
 
     const minutes = Math.floor((time/60)%60)
     let hours = Math.floor(((time/60/60)%60))
@@ -13,7 +28,7 @@ function UpdateTimer(){
 
     document.querySelector("#date").innerHTML= `${hours} : ${minutes} : ${seconds}` 
     time--
-}*/
+}
 /*
 
 setInterval(() => {
@@ -146,7 +161,7 @@ setInterval(() => {
 
 
 
-
+/*
 setInterval(() => {
     var a = new Date('9, 9, 2022 14:26:00');
     var b = new Date();
@@ -193,4 +208,4 @@ setInterval(() => {
 
     
     
-}, 1000);
+}, 1000);*/

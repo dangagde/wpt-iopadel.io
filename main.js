@@ -123,37 +123,30 @@ document.getElementById("auto-card").innerHTML=`
 ${players.map(fotosTemplate).join('')}`
 
 
-setInterval(() => {
-    var a = new Date('9, 12, 2022 20:30:00');
-    var b = new Date();
+const a = new Date('9 12, 2022 20:30:00');
+const b = new Date();
+const startTiming = ((a-b)*(10** -3))
+let time = startTiming
+console.log(time)
+setInterval(UpdateTimer,1000)
+function UpdateTimer(){
+    let days = Math.floor(time/60/60/24)
+    let hours = Math.floor(((time/60/60)%24))
+    const minutes = Math.floor((time/60)%60)
+    let seconds = Math.floor(time%60)
 
-    var days = a.getDate() - b.getDate();
-    var hours = a.getHours()-b.getHours();
-    var minutes = a.getMinutes()-b.getMinutes();
-    var seconds = a.getSeconds()-b.getSeconds();
-    if(minutes<0){
-        minutes = minutes + 60;
-        hours = hours - 1;
-    }
-    if(seconds<0){
-        minutes = minutes -1;
-        seconds = seconds+60;
-    }
-    if(b<a){
-        m= days+'D : '+hours+'h : '+minutes+'min : '+seconds+'s';
+    if(time<0){
 
-        
+        document.querySelector("#date").innerHTML= `Jornada en curso` 
+
     }else{
-        m= 'La jornada actual finalizará en: '+'';
-        
-        console.log('cambio')
-    }
-    console.log(a.getDay())
-    document.querySelector("#date").innerHTML= m
+        document.querySelector("#date").innerHTML= `${days}D : ${hours}h : ${minutes}m : ${seconds}s` 
 
-    
-    
-}, 1000);
+    }
+
+    time--
+}
+
 
 
 
