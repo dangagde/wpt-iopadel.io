@@ -120,7 +120,7 @@ function fotosTemplate(jugador){
                 <div class="player-name">${jugador.name}</div>
             </div>
             <div class="player-photo">
-                <img src=${jugador.profile} alt="">
+                <a href=${'profile2.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
             </div>
         </div>
         <div class="player-footer">
