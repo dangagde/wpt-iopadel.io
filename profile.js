@@ -161,7 +161,7 @@ function playerTemplate(p){
                 </li>
                 <li>
                     <span>Efectividad</span>
-                    <span>${(p.win*100)/p.match}</span>
+                    <span>${((p.win*100)/p.match).toFixed(2)}</span>
                 </li>
             </ul>
         </div>                 
