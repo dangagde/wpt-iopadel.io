@@ -141,7 +141,7 @@ ${players.map(fotosTemplate).join('')}`
 
 
 
-const a = new Date('9 12, 2022 20:30:00');
+const a = new Date('9 19, 2022 20:15:00');
 const b = new Date();
 const startTiming = ((a-b)*(10** -3))
 let time = startTiming
