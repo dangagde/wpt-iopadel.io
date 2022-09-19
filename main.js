@@ -120,7 +120,7 @@ function fotosTemplate(jugador){
                 <div class="player-name">${jugador.name}</div>
             </div>
             <div class="player-photo">
-                <a href=${'profile2.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
+                <a href=${'profile.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
             </div>
         </div>
         <div class="player-footer">
@@ -165,3 +165,73 @@ function UpdateTimer(){
 }
 
 
+/////////////////////////////////////
+
+/////////////////////////////////////
+
+/*
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+
+const player = urlParams.get('id')
+console.log(player);
+
+
+var mess= document.getElementById('prueba');
+console.log(jugadores[player]);
+
+
+
+
+function playerTemplateStats(p){
+    return `
+
+    <div class="block-profile">
+    <div class="block-profile-up">
+        <div class="profile-name">
+            <h3>${p.name}</h3>
+        </div>
+        <div class="name-ranking-profile">
+            <h5>Puesto</h5>
+            <h5>Puntos</h5>
+        </div>
+        <div class="name-ranking-profile">
+            <h3>${players.findIndex(x => x.name == p.name)+1}</h3>
+            <img class="profile-img" src=${p.profile}>
+            <h3>${p.points}</h3>
+
+        </div>
+        
+
+    </div>
+
+    <div class="block-profile-down">
+        <div class="block-player-stats">
+            <ul class="player-stats">
+                <li>
+                    <span>Partidos jugados</span>
+                    <span>${p.match}</span>
+                </li>
+                <li>
+                    <span>Partidos ganados</span>
+                    <span>${p.win}</span>
+                </li>
+                <li>
+                    <span>Partidos perdidos</span>
+                    <span>${p.match-p.win}</span>
+                </li>
+                <li>
+                    <span>Efectividad</span>
+                    <span>${(p.win*100)/p.match}</span>
+                </li>
+            </ul>
+        </div>                 
+        
+    </div>
+
+
+    `
+}
+document.getElementById("prueba").innerHTML=`
+${(playerTemplateStats(players[player]))}`*/
