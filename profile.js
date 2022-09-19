@@ -111,11 +111,9 @@ const suplentes = [
 let players = jugadores.sort((a,b) => {return b.points - a.points;});
 
 const queryString = window.location.search;
-console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 
 const player = urlParams.get('id')
-console.log(player);
 
 
 var mess= document.getElementById('prueba');
