@@ -174,7 +174,7 @@ function playerTemplate(p){
     `
 }
 document.getElementById("prueba").innerHTML=`
-${(playerTemplate(suplente[player]))}`
+${(playerTemplate(players[player]))}`
 
 
 
