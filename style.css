@@ -130,8 +130,8 @@ box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    border-width: 3px;
-    border-color: rgb(136, 233, 250);
+    background: linear-gradient(45deg, #22356d 25%, slateblue 85%, #88e9fa 95%) border-box;
+    border: 3px solid transparent;
     border-style: solid;
 }
 
@@ -143,6 +143,7 @@ box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 5%;
 }
 
 .player-country img{

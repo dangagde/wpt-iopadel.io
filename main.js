@@ -109,8 +109,89 @@ const suplentes = [
 /* PLAYERS */
 
 
-let players = jugadores.sort((a,b) => {return b.points - a.points;});
+let player_sort = jugadores.sort((a,b) => {return b.points - a.points;});
+let players = player_sort.slice(0);
 let suplente = suplentes.sort((a,b) => {return b.points - a.points;});
+
+function fotosTemplateFirst(jugador){
+    return `
+    <li class="player-card">
+    <a class="link-bio">
+        <div class="player-header">
+            <div class="player-details">
+                <div class="player-ranking">${players.findIndex(x => x.name == jugador.name)+1}</div>
+                <div class="player-name">${jugador.name}</div>
+            </div>
+            <div class="player-photo">
+                <a href=${'profile.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
+            </div>
+        </div>
+        <div style="background: rgb(255,215,0);
+        background: linear-gradient(100deg, rgba(255,215,0,1) 25%, rgba(136,233,250,1) 75%);" class="player-footer">
+            <div class="player-country">
+                <img src= ${jugador.country} height="20">
+            </div>
+            <div class="player-score">${jugador.points}</div>
+        </div>
+    </a>
+</li>   
+        
+`
+}
+
+function fotosTemplateSecond(jugador){
+    return `
+    <li class="player-card">
+    <a class="link-bio">
+        <div class="player-header">
+            <div class="player-details">
+                <div class="player-ranking">${players.findIndex(x => x.name == jugador.name)+1}</div>
+                <div class="player-name">${jugador.name}</div>
+            </div>
+            <div class="player-photo">
+                <a href=${'profile.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
+            </div>
+        </div>
+        <div style="background: rgb(192,192,192);
+        background: linear-gradient(100deg, rgba(192,192,192,1) 25%, rgba(136,233,250,1) 75%);" class="player-footer">
+            <div class="player-country">
+                <img src= ${jugador.country} height="20">
+            </div>
+            <div class="player-score">${jugador.points}</div>
+        </div>
+    </a>
+</li>   
+        
+`
+}
+
+function fotosTemplateThird(jugador){
+    return `
+    <li class="player-card">
+    <a class="link-bio">
+        <div class="player-header">
+            <div class="player-details">
+                <div class="player-ranking">${players.findIndex(x => x.name == jugador.name)+1}</div>
+                <div class="player-name">${jugador.name}</div>
+            </div>
+            <div class="player-photo">
+                <a href=${'profile.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
+            </div>
+        </div>
+        <div style="background: rgb(204,102,51);
+        background: linear-gradient(100deg, rgba(204,102,51,1) 25%, rgba(136,233,250,1) 75%);" class="player-footer">
+            <div class="player-country">
+                <img src= ${jugador.country} height="20">
+            </div>
+            <div class="player-score">${jugador.points}</div>
+        </div>
+    </a>
+</li>   
+        
+`
+}
+
+
 function fotosTemplate(jugador){
     return `
     <li class="player-card">
@@ -124,7 +205,8 @@ function fotosTemplate(jugador){
                 <a href=${'profile.html'+'?id='+players.findIndex(x => x.name == jugador.name)}><img src=${jugador.profile} alt="" ></a>
             </div>
         </div>
-        <div class="player-footer">
+        <div style="background: rgb(34,53,109);
+        background: linear-gradient(100deg, rgba(34,53,109,1) 25%, rgba(136,233,250,1) 75%);" class="player-footer">
             <div class="player-country">
                 <img src= ${jugador.country} height="20">
             </div>
@@ -135,9 +217,13 @@ function fotosTemplate(jugador){
         
 `
 }
-let player_map = players.map(fotosTemplate).join('');
+
+let player_first_map = players.slice(0,1).map(fotosTemplateFirst).join('');
+let player_second_map = players.slice(1,2).map(fotosTemplateSecond).join('');
+let player_third_map = players.slice(2,3).map(fotosTemplateThird).join('');
+let player_map = players.slice(3).map(fotosTemplate).join('');
 let suplente_map = suplente.map(fotosTemplate).join('');
-document.getElementById("auto-card").innerHTML= player_map + suplente_map;
+document.getElementById("auto-card").innerHTML= player_first_map + player_second_map + player_third_map + player_map + suplente_map;
 
 
 
