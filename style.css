@@ -59,8 +59,8 @@ body{
     justify-content: space-between;
     list-style: none;
     margin-top: 0;
-    padding: 5px;
-    max-width: 580px;
+    padding: 1px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
@@ -72,7 +72,7 @@ body{
     font-weight: 720;
     color: #22356d;
     align-items: center;
-    padding: 10px 5px 0px 5px;
+    padding: 10px 0px 0px 0px;
     margin-top: 15px;
     box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 10px 14px -17px rgba(0,0,0,0.75);
